@@ -40,6 +40,9 @@
                 axios.get("https://crudcrud.com/api/0705468a92a845b68a88f2d2d7accf9f/empdata")
                 .then((respone)=>{
                     console.log(respone);
+                    for(var i=0;i<=respone.data.length;i++){
+                        showNewUserOnScreen(respone,data[i]);
+                    }
                 })
                 .catch((error)=>{
                     console.log(error)
